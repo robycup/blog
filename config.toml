@@ -2,6 +2,7 @@
 baseurl = "https://example.org/"
 themesDir = "themes"
 languageCode = "en-us"
+publishDir = "docs"
 title = "Hugo Cactus Theme"
 theme = "cactus"
 # Enter your tracking code to enable Google Analytics
