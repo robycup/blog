@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://example.org/"
+baseurl = "https://robycup.github.io/blog/"
 themesDir = "themes"
 languageCode = "en-us"
 publishDir = "docs"
