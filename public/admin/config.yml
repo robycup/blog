@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: robycup/blog
+  branch: main
+
+
+media_folder: public/images
+public_folder: /images
+
+
+collections:
+
+  - name: blog
+    label: Articoli
+
+    folder: src/content/blog
+
+    create: true
+
+    slug: "{{slug}}"
+
+    fields:
+
+      - label: Titolo
+        name: title
+        widget: string
+
+      - label: Descrizione
+        name: description
+        widget: text
+
+      - label: Data
+        name: pubDate
+        widget: datetime
+
+      - label: Contenuto
+        name: body
+        widget: markdown
