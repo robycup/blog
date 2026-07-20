@@ -2,7 +2,7 @@ backend:
   name: github
   repo: robycup/blog
   branch: main
-
+  app_id: Ov23liFdC4L5vddWfgL5
 
 media_folder: public/images
 public_folder: /images
