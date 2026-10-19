@@ -1,0 +1,147 @@
+:root {
+	--accent: #c05a32;
+	--ink: #20211e;
+	--muted: #696b65;
+	--line: #e5e3dc;
+	--surface: #f5f4ef;
+	--paper: #fbfaf7;
+	--radius: 12px;
+	color-scheme: light;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: var(--paper);
+	scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--font-atkinson), system-ui, sans-serif;
+	font-size: 18px;
+	line-height: 1.65;
+}
+
+a {
+	color: var(--accent);
+}
+
+a:focus-visible {
+	outline: 3px solid var(--accent);
+	outline-offset: 4px;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin-top: 0;
+}
+
+.container {
+	width: min(100% - 3rem, 1080px);
+	margin-inline: auto;
+}
+
+.prose {
+	color: #3a3b36;
+	font-size: 1.08rem;
+	line-height: 1.8;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+	margin-top: 2.2em;
+	color: var(--ink);
+	line-height: 1.25;
+}
+
+.prose h2 {
+	font-size: 1.8rem;
+	letter-spacing: -0.035em;
+}
+
+.prose h3 {
+	font-size: 1.35rem;
+}
+
+.prose a {
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.prose img {
+	max-width: 100%;
+	height: auto;
+	border-radius: var(--radius);
+}
+
+.prose pre {
+	overflow-x: auto;
+	padding: 1.25rem;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: #f1f0eb;
+	font-size: 0.88rem;
+	line-height: 1.6;
+}
+
+.prose :not(pre) > code {
+	padding: 0.15em 0.35em;
+	border-radius: 4px;
+	background: #eeece5;
+	font-size: 0.88em;
+}
+
+.prose blockquote {
+	margin-inline: 0;
+	padding: 0.2rem 1.2rem;
+	border-left: 3px solid var(--accent);
+	color: var(--muted);
+}
+
+.prose table {
+	display: block;
+	overflow-x: auto;
+	border-collapse: collapse;
+}
+
+.prose th,
+.prose td {
+	padding: 0.6rem 0.8rem;
+	border: 1px solid var(--line);
+	text-align: left;
+}
+
+.prose th {
+	background: var(--surface);
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+@media (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+
+	.container {
+		width: min(100% - 2rem, 1080px);
+	}
+}

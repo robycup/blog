@@ -1,0 +1,64 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav class="container" aria-label="Navigazione principale">
+		<a class="brand" href="/">{SITE_TITLE}<span>.</span></a>
+		<div class="nav-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Articoli</HeaderLink>
+			<HeaderLink href="/about">Chi sono</HeaderLink>
+			<a href="/rss.xml">RSS</a>
+		</div>
+	</nav>
+</header>
+
+<style>
+	header {
+		border-bottom: 1px solid var(--line);
+	}
+	nav {
+		min-height: 76px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.brand {
+		color: var(--ink);
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+	.brand span {
+		color: var(--accent);
+	}
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: clamp(0.8rem, 3vw, 1.8rem);
+	}
+	.nav-links a {
+		color: var(--muted);
+		text-decoration: none;
+	}
+	.nav-links a:hover,
+	.nav-links a.active {
+		color: var(--ink);
+	}
+	@media (max-width: 720px) {
+		nav {
+			min-height: 68px;
+			align-items: flex-start;
+			flex-direction: column;
+			justify-content: center;
+			gap: 0.35rem;
+			padding-block: 0.6rem;
+		}
+		.nav-links {
+			gap: 1rem;
+			font-size: 0.9rem;
+		}
+	}
+</style>
